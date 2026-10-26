@@ -1,0 +1,96 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #12df78;
+    color: white;
+    min-height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    width: 90%;
+    max-width: 650px;
+    text-align: center;
+    padding: 20px;
+}
+
+h1 {
+    font-size: 48px;
+    margin-bottom: 10px;
+}
+
+.subtitulo {
+    color: #b8c4d9;
+    margin-bottom: 25px;
+}
+
+.placar {
+    display: flex;
+    justify-content: space-around;
+    gap: 12px;
+    background: #75c012;
+    padding: 15px;
+    border-radius: 12px;
+    margin-bottom: 25px;
+}
+
+.tabuleiro {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 12px;
+}
+
+.carta {
+    aspect-ratio: 1 / 1;
+    background: #da1414;
+    border: 2px solid #6b0652;
+    border-radius: 12px;
+    cursor: pointer;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-size: 45px;
+    transition: transform 0.2s;
+}
+
+.carta:hover {
+    transform: scale(1.04);
+}
+
+.carta img {
+    width: 85%;
+    height: 85%;
+    object-fit: contain;
+}
+
+.carta.encontrada {
+    background: #d9fbe8;
+    border-color: #37b878;
+    cursor: default;
+}
+
+#reiniciar {
+    margin-top: 25px;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 10px;
+    background: #f7c948;
+    color: #101827;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+#reiniciar:hover {
+    background: #ffdb70;
+}
